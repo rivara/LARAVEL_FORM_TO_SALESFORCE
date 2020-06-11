@@ -33,6 +33,10 @@ class HomeController extends Controller
     {
 
         App::setlocale($lang);
+        $array = DB::table('users')->where('email', Auth::user()->email)->get();
+        return view('home', ['datos' => $array[0], 'lang' => $lang]);
+
+        DIE();
         //Forma alternativa de acceder a los datos (Realese2)
         Forrest::authenticate();
 

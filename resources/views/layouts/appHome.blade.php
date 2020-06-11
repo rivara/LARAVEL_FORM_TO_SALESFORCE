@@ -37,8 +37,7 @@
                     {{ config('app.name', 'Laravel') }}
             </a>-->
             <div class="headerLogo navbar-brand">
-                <div class="floatLeft"><img src="{{ asset('images/logoGrey.png') }}"></div>
-                <div class="floatRight"><h5>EXPERTS beta</h5></div>
+                <h2>TU PORTAL</h2>
             </div>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
