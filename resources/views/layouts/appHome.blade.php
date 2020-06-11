@@ -52,18 +52,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Profiles <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Demos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Materials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Q&A</a>
-                    </li>
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->

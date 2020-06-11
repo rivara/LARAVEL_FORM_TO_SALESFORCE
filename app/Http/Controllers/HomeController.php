@@ -33,10 +33,6 @@ class HomeController extends Controller
     {
 
         App::setlocale($lang);
-        $array = DB::table('users')->where('email', Auth::user()->email)->get();
-        return view('home', ['datos' => $array[0], 'lang' => $lang]);
-
-        DIE();
         //Forma alternativa de acceder a los datos (Realese2)
         Forrest::authenticate();
 
@@ -81,13 +77,13 @@ class HomeController extends Controller
             if (!is_null(Auth::user()->mobile)) {
                 $LeadNuevo->MobilePhone = Auth::user()->mobile;
             } else {
-                // $LeadNuevo->MobilePhone =" ";
+                 $LeadNuevo->MobilePhone =" ";
             }
 
             if (!is_null(Auth::user()->phone)) {
                 $LeadNuevo->Phone = Auth::user()->phone;
             } else {
-                //$LeadNuevo->Phone= " ";
+                $LeadNuevo->Phone= " ";
             }
             $LeadNuevo->save();
             // grabo el id generado ensaleforce
@@ -100,7 +96,7 @@ class HomeController extends Controller
             Forrest::sobjects('Lead/' . $id[0], [
                 'method' => 'patch',
                 'body'   => [
-                    'NumberOfEmployees'=>"22",
+                    'NumberOfEmployees'=> Auth::user()->companySize()
 
                  ]
              ]);
